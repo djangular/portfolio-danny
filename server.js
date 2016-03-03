@@ -1,13 +1,13 @@
 var express      = require('express');
 var app          = express();
-var favicon      = require('serve-favicon');
+//var favicon      = require('serve-favicon');
 var bodyParser   = require('body-parser');
 
 /**
  * Routing & middlewares
  */
 app.use(express.static(__dirname + '/static'));
-app.use(favicon(__dirname + '/favicon.ico'));
+//app.use(favicon(__dirname + '/favicon.ico'));
 app.use(bodyParser.json({ extended: true }));
 
 app.use(function (request, response) {
