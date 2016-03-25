@@ -58,7 +58,7 @@
                 <div id="header-inner-wrap" class=" style1">
                     <div id="left-header-mobile" class="clearfix">
                         <div class="logo">
-                            <a href="index.html"><img class="normal-logo" src="upload/oshin-logo-new.png" alt="Logo" /><img class="sticky-logo" src="upload/oshin-logo-new.png" alt="Logo" /></a>
+                            <a href="/"><img class="normal-logo" src="{% static "upload/oshin-logo-new.png" %}" alt="Logo" /><img class="sticky-logo" src="{% static "upload/oshin-logo-new.png" %}" alt="Logo" /></a>
                         </div>
                         <div class="header-cart-controls">
                             <a class="cart-contents" href="#" title="View your shopping cart">
@@ -79,7 +79,7 @@
 
                       <!--   LOGO -->
                         <div class="logo">
-                            <a href="index.html"><img class="normal-logo" src="{% static "upload/oshin-logo-new.png" %}" alt="Logo" /><img class="sticky-logo" src="upload/oshin-logo-new.png" alt="Logo" /></a>
+                            <a href="index.html"><img class="normal-logo" src="{% static "upload/oshin-logo-new.png" %}" alt="Logo" /><img class="sticky-logo" src="{% static "upload/oshin-logo-new.png" %}" alt="Logo" /></a>
                         </div>
 
                       <!--        -->
@@ -129,28 +129,12 @@
 
                         {% for photo in gallery %}
 
-                        <div class="placeholder style1_placehloder load show-title" data-source="{{ photo.file.url }}" style="margin-right: 30px"><img src="{% static "index.html" %}" style="opacity: 0; display: block;" alt="" /></div>  
+                        <div class="placeholder style1_placehloder load show-title" data-source="{{ photo.file.url }}" style="margin-right: 30px"><img src="{{ photo.file.url }}" style="opacity: 0; display: block;" alt="" /></div>
 
                         {% endfor %}
 
                        {% endif %}
-                      <!--
-                        <div class="placeholder style1_placehloder load show-title" data-source="{% static "images/DSC00753.jpg" %}" style="margin-right: 30px"><img src="{% static "index.html" %}" style="opacity: 0; display: block;" alt="" /></div>
-                        <div class="placeholder style1_placehloder load show-title" data-source="images/ColorCouple.jpg" style="margin-right: 30px"><img src="index.html" style="opacity: 0; display: block;" alt="" /></div>
-                        <div class="placeholder style1_placehloder load show-title" data-source="images/DSC02966.jpg" style="margin-right: 30px"><img src="index.html" style="opacity: 0; display: block;" alt="" /></div>
-                        <div class="placeholder style1_placehloder load show-title" data-source="images/DSC02609.jpg" style="margin-right: 30px"><img src="index.html" style="opacity: 0; display: block;" alt="" /></div>
-                        <div class="placeholder style1_placehloder load show-title" data-source="images/DSC00839.jpg" style="margin-right: 30px"><img src="index.html" style="opacity: 0; display: block;" alt="" /></div>
-                        <div class="placeholder style1_placehloder load show-title" data-source="images/DSC01573.jpg" style="margin-right: 30px"><img src="index.html" style="opacity: 0; display: block;" alt="" /></div>
-                        <div class="placeholder style1_placehloder load show-title" data-source="images/DSC01167.jpg" style="margin-right: 30px"><img src="index.html" style="opacity: 0; display: block;" alt="" /></div>
-                        <div class="placeholder style1_placehloder load show-title" data-source="images/DSC01411.jpg" style="margin-right: 30px"><img src="index.html" style="opacity: 0; display: block;" alt="" /></div>
-                        <div class="placeholder style1_placehloder load show-title" data-source="images/DSC01126.jpg" style="margin-right: 30px"><img src="index.html" style="opacity: 0; display: block;" alt="" /></div>
-                        <div class="placeholder style1_placehloder load show-title" data-source="images/DSC02298.jpg" style="margin-right: 30px"><img src="index.html" style="opacity: 0; display: block;" alt="" /></div>
-                        <div class="placeholder style1_placehloder load show-title" data-source="upload/oshin_light_fashion_28-0022-comp.jpg" style="margin-right: 30px"><img src="index.html" style="opacity: 0; display: block;" alt="" /></div>
-                        <div class="placeholder style1_placehloder load show-title" data-source="upload/oshin_light_fashion_28-0011-comp.jpg" style="margin-right: 30px"><img src="index.html" style="opacity: 0; display: block;" alt="" /></div>
-                        <div class="placeholder style1_placehloder load show-title" data-source="upload/oshin_light_fashion_29-0015-comp.jpg" style="margin-right: 30px"><img src="index.html" style="opacity: 0; display: block;" alt="" /></div>
-                        <div class="placeholder style1_placehloder load show-title" data-source="upload/oshin_light_fashion_28-0006-comp.jpg" style="margin-right: 30px"><img src="index.html" style="opacity: 0; display: block;" alt="" /></div>
-                        <div class="placeholder style1_placehloder load show-title" data-source="upload/oshin_light_fashion-0008-comp.jpg" style="margin-right: 30px"><img src="index.html" style="opacity: 0; display: block;" alt="" /></div>
-                      -->
+                       
                     </div>
                 </div>
                 <div class="gallery-info-box-wrap hide-info-box">
