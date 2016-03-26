@@ -99,7 +99,7 @@
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2621"><a href="/">Home</a></li>
                                     <!--<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2620"><a href="portfolio-grid.html">Portfolio</a></li>-->
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2620"><a href="/about">About Me</a></li>
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2620"><a href="/blog">Blog</a></li>
+                                    <!--<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2620"><a href="/blog">Blog</a></li>-->
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-6 current_page_item menu-item-2813"><a href="#">Contact</a></li>
                                 </ul>
                             </div>
@@ -113,7 +113,7 @@
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2621"><a href="/">Home</a></li>
                                 <!--<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2620"><a href="portfolio-grid.html">Portfolio</a></li>-->
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2620"><a href="/about">About Me</a></li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2620"><a href="/blog">Blog</a></li>
+                                <!--<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2620"><a href="/blog">Blog</a></li>-->
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-6 current_page_item menu-item-2813"><a href="#">Contact</a></li>
                             </ul>
                         </div>
@@ -167,10 +167,10 @@
                                     <div class="one-half column-block" data-animation="" style="">
                                         <div class="be-custom-column-inner">
                                             <div class="contact_form contact_form_module style1-input">
-                                                <form id="contact-form" class="contact" method="POST" action="/sendmessage">
+                                                <form id="contact-form" class="contact">
                                                   {% csrf_token %}
                                                      <fieldset class="contact_fieldset">
-                                                        <input type="text"  name="name" id="name" class="txt autoclear" placeholder="Name" required/>
+                                                        <input type="text" name="name" id="name" class="txt autoclear" placeholder="Name" required/>
                                                     </fieldset>
                                                     <fieldset class="contact_fieldset">
                                                         <input type="text" name="email" id="email" class="txt autoclear" placeholder="Email" required/>
@@ -182,7 +182,8 @@
                                                         <textarea  name="comment" id="comment" class="txt_area autoclear" placeholder="Message" required></textarea>
                                                     </fieldset>
                                                     <fieldset class="contact_fieldset submit-fieldset">
-                                                        <input type="submit" value="Submit" class="contact_submit be-shortcode mediumbtn be-button rounded" style="background-color: #000000;color: #ffffff;"/>
+                                                        <input type="submit" id="submit_contact" value="Submit" class="contact_submit be-shortcode mediumbtn be-button rounded" style="background-color: #000000;color: #ffffff;"/>
+                                                        <div id="msg" class="message"></div>
                                                     </fieldset>
                                                 </form>
                                             </div>
@@ -201,11 +202,9 @@
             <div id="footer-wrap" class=" style1 clearfix">
                 <div class="footer-left-area">
                     <div class="footer-content-inner-left">
-                        <div class="icon-shortcode align-none"><a href="#" class="icon-shortcode icon-circle  " data-animation="fadeIn"><i class="font-icon icon-facebook2 tiny circle" style="border-style: solid; border-width: px; border-color: #000000; background-color: #000000; color: #ffffff;" data-animation="fadeIn" data-bg-color="#000000" data-hover-bg-color="#af9f66" data-color="#ffffff" data-hover-color="#ffffff" data-border-color="#000000" data-hover-border-color="#af9f66"></i></a></div>
-                        <div class="icon-shortcode align-none"><a href="#" class="icon-shortcode icon-circle  " data-animation="fadeIn"><i class="font-icon icon-twitter2 tiny circle" style="border-style: solid; border-width: px; border-color: #000000; background-color: #000000; color: #ffffff;" data-animation="fadeIn" data-bg-color="#000000" data-hover-bg-color="#af9f66" data-color="#ffffff" data-hover-color="#ffffff" data-border-color="#000000" data-hover-border-color="#af9f66"></i></a></div>
-                        <div class="icon-shortcode align-none"><a href="#" class="icon-shortcode icon-circle  " data-animation="fadeIn"><i class="font-icon icon-pinterest2 tiny circle" style="border-style: solid; border-width: px; border-color: #000000; background-color: #000000; color: #ffffff;" data-animation="fadeIn" data-bg-color="#000000" data-hover-bg-color="#af9f66" data-color="#ffffff" data-hover-color="#ffffff" data-border-color="#000000" data-hover-border-color="#af9f66"></i></a></div>
-                        <div class="icon-shortcode align-none"><a href="#" class="icon-shortcode icon-circle  " data-animation="fadeIn"><i class="font-icon icon-flickr2 tiny circle" style="border-style: solid; border-width: px; border-color: #000000; background-color: #000000; color: #ffffff;" data-animation="fadeIn" data-bg-color="#000000" data-hover-bg-color="#af9f66" data-color="#ffffff" data-hover-color="#ffffff" data-border-color="#000000" data-hover-border-color="#af9f66"></i></a></div>
-                        <div class="icon-shortcode align-none"><a href="https://www.instagram.com/dannyn44/" class="icon-shortcode icon-circle  " data-animation="fadeIn"><i class="font-icon icon-instagram2 tiny circle" style="border-style: solid; border-width: px; border-color: #000000; background-color: #000000; color: #ffffff;" data-animation="fadeIn" data-bg-color="#000000" data-hover-bg-color="#af9f66" data-color="#ffffff" data-hover-color="#ffffff" data-border-color="#000000" data-hover-border-color="#af9f66"></i></a></div>
+                        <div class="icon-shortcode align-none"><a href="#" class="icon-shortcode icon-circle" data-animation="fadeIn"><i class="font-icon icon-facebook2 tiny circle" style="border-style: solid; border-width: px; border-color: #000000; background-color: #000000; color: #ffffff;" data-animation="fadeIn" data-bg-color="#000000" data-hover-bg-color="#af9f66" data-color="#ffffff" data-hover-color="#ffffff" data-border-color="#000000" data-hover-border-color="#af9f66"></i></a></div>
+                        <div class="icon-shortcode align-none"><a href="#" class="icon-shortcode icon-circle" data-animation="fadeIn"><i class="font-icon icon-twitter2 tiny circle" style="border-style: solid; border-width: px; border-color: #000000; background-color: #000000; color: #ffffff;" data-animation="fadeIn" data-bg-color="#000000" data-hover-bg-color="#af9f66" data-color="#ffffff" data-hover-color="#ffffff" data-border-color="#000000" data-hover-border-color="#af9f66"></i></a></div>
+                        <div class="icon-shortcode align-none"><a href="https://www.instagram.com/dannyn44/" class="icon-shortcode icon-circle" data-animation="fadeIn"><i class="font-icon icon-instagram2 tiny circle" style="border-style: solid; border-width: px; border-color: #000000; background-color: #000000; color: #ffffff;" data-animation="fadeIn" data-bg-color="#000000" data-hover-bg-color="#af9f66" data-color="#ffffff" data-hover-color="#ffffff" data-border-color="#000000" data-hover-border-color="#af9f66"></i></a></div>
                     </div>
                 </div>
                 <div class="footer-center-area"> </div>
@@ -245,6 +244,7 @@
     <script type='text/javascript' src="{% static "js/frontend/cart-fragments.min.js" %}"></script>
     <script type='text/javascript' src="{% static "js/woocommerce.js" %}"></script>
     <script type='text/javascript' src="{% static "js/be-slider.js" %}"></script>
+    <script type='text/javascript' src="{% static "js/bb-press.js" %}"></script>
     <script type='text/javascript' src='https://maps.googleapis.com/maps/api/js'></script>
     <script type='text/javascript' src="{% static "js/gmap3.min.js" %}"></script>
     <script type='text/javascript' src="{% static "js/jquery-ui-1.8.22.custom.min.js" %}"></script>
