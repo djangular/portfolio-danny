@@ -361,6 +361,7 @@ Logo
  
 .logo a, .logo a img {
 	display: block;
+    max-width: 75px;
 }
 
 	/*Logo - Float Left*/
