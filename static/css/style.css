@@ -222,6 +222,10 @@ html.hide-overflow{
 	margin-left: 15px;
 }
 
+#header-controls-right .menu-controls {
+    margin: 20px auto;
+}
+
 #header-top-bar-left ul ,
 #header-top-bar-right ul ,
 #header-controls-left ul {
