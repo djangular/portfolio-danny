@@ -560,6 +560,10 @@ Logo
 	zoom: 1;
 	vertical-align: top;
 	float: right;
+    margin: 20px auto;
+}
+.style6 #navigation-right-side #right-menu {
+    margin: 20px auto;
 }
 .mobile-menu.left-mobile-menu #mobile-menu {
 	padding-bottom: 0px !important;
