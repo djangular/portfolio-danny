@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+
+{% block title %}<title>{{ title }}</title>{% endblock %}
+
+{% block content %}
+
+    <div id="main-wrapper">
+        <div id="main" class="ajaxable layout-wide">
+            <header id="header">
+                <div id="header-inner-wrap" class=" style6">
+                    <div id="left-header-mobile" class="clearfix">
+                        <div class="logo">
+                            <a href="/"><img class="normal-logo" src="{% static "images/logo.png" %}" alt="Logo" /><img class="sticky-logo" src="{% static "images/logo.png" %}" alt="Logo" /></a>
+                        </div>
+                        <div class="mobile-nav-controller-wrap">
+                            <div class="menu-controls mobile-nav-controller" title="Mobile Menu Controller"><i class="font-icon icon-list2"></i></div>
+                        </div>
+                    </div>
+                    <div id="header-wrap" class="be-wrap clearfix" data-default-height="128" data-sticky-height="128">
+                        <div class="logo">
+                            <a href="/"><img class="normal-logo" src="{% static "images/logo.png" %}" alt="Logo" /><img class="sticky-logo" src="{% static "images/logo.png" %}" alt="Logo" /></a>
+                        </div>
+                        <div id="header-controls-right">
+                            <div class="mobile-nav-controller-wrap">
+                                <div class="menu-controls mobile-nav-controller">
+                                    <div class="font-icon custom-font-icon"><span class="menu-icon menu-icon-first"></span><span class="menu-icon menu-icon-second"></span><span class="menu-icon menu-icon-third"></span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <nav id="navigation-left-side" class="clearfix">
+                            <div class="menu">
+                                <ul id="left-menu" class="clearfix">
+                                    <li id="menu-item-176" class="current_page_item menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-176"><a href="#">About</a></li>
+                                    <li id="menu-item-177" class="menu-item menu-item-type-post_type menu-item-object-page  page_item page-item-4 menu-item-177"><a href="/">Home</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                        <nav id="navigation-right-side" class="clearfix">
+                            <div class="menu">
+                                <ul id="right-menu" class="clearfix">
+                                    <!--<li id="menu-item-179" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-179"><a href="blog.html">Journal</a></li> -->
+                                    <li id="menu-item-178" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-178"><a href="/contact">Booking</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+
+
+                    <span class="header-border be-wrap"></span>
+                    <div class="clearfix">
+                        <div class="mobile-menu left-mobile-menu">
+                            <ul id="mobile-menu" class="clearfix">
+                                <li class=" current_page_itemmenu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-176"><a href="#">About</a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page  page_item page-item-4 menu-item-177"><a href="/">Home</a></li>
+                            </ul>
+                        </div>
+                        <div class="mobile-menu right-mobile-menu">
+                            <ul id="mobile-menu" class="clearfix">
+                                <!--<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-179"><a href="blog.html">Journal</a></li> -->
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-178"><a href="/contact">Booking</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- END HEADER -->
+
+
+            <div class="header-hero-section"></div>
+            <div id="content" class="no-sidebar-page">
+                <div id="content-wrap" class="page-builder">
+                    <section id="page-content">
+                        <div class="clearfix">
+                            <div class="be-section clearfix" data-headerscheme="background--dark" style="">
+                                <div class="be-section-pad clearfix" style="padding-top:90px;padding-bottom:90px;">
+                                    <div class="be-row be-wrap clearfix">
+                                        <div class="one-col column-block clearfix" data-animation="" style="">
+                                            <div class="be-custom-column-inner">
+                                                <div class="special-heading-wrap style1 0" data-animation="fadeIn">
+                                                    <div class="special-heading align-center">
+                                                        <h4 class="special-h-tag" style="color: ">About Me</h4>
+                                                        <div class="sep-with-icon-wrap margin-bottom"><span class="sep-with-icon" style="background-color:#dddddd;border-color:#dddddd;color:#dddddd;height:1px;width:35px;"></span><i class="sep-icon font-icon icon-dimond" style="background-color:#000000;"></i><span class="sep-with-icon" style="background-color:#dddddd;border-color:#dddddd;color:#dddddd;height:1px;width:35px;"></span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="be-row be-wrap clearfix">
+                                        <div class="one-half column-block" data-animation="" style="">
+                                            <div class="be-custom-column-inner">
+                                                <!--<div class="special-subtitle-wrap 0" style="margin-bottom: 20px;" data-animation="fadeIn">
+                                                    <div class="align-left"><span class="special-subtitle" style="color: ; font-size: 16px ; width: 100%">I am a fashion photographer based out of Paris, who loves to click, cook &amp; travel.</span></div>
+                                                </div>-->
+                                                <h4>Who am I?</h4>
+                                                <p>Hi, my name’s Daniel but call me Danny. I’m a photographer from Los Angeles living in Boston. I’m going to school for photojournalism and spend most weekends bartending. I like all sorts of photography but gravitate towards the streets, nightlife, and black and white.</p>
+                                                <h4>What am I doing?</h4>
+                                                <p>In Spanish, the word “duende” doesn’t quite translate into English. It's understood as the ineffable force that moves people to empathize; it’s the soul we search for in the people, places and things we come across. That's the main concept behind Duende in RAW. I’m looking for the beauty in peoples' vulnerability and individuality. I take pictures to showcase the individual, to separate the intimate from the stoic, and to capture the duende of the human condition.
+                                                <br />
+                                                <br />
+                                                Happy scrolling…</p>
+                                                <div class="be-button-wrap none"><a class="be-shortcode mediumbtn be-button left-icon bg-animation-none" href="/contact" style="border-style: solid; border-width:2px; border-color: #000000;background-color: #000000; color: #ffffff;" data-animation="fadeIn" data-bg-color="#000000" data-hover-bg-color="#000000" data-color="#ffffff" data-hover-color="#ffffff" data-border-color="#000000" data-hover-border-color="#000000">GET IN TOUCH</a></div>
+                                            </div>
+                                        </div>
+                                        <div class="one-half column-block" data-animation="" style="">
+                                            <div class="be-custom-column-inner">
+                                                <p><img class="alignnone size-portfolio-masonry wp-image-192" src="{% static "images/profile.jpg" %}" alt="nico_feb10_10" width="650" height="912"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="be-section clearfix" data-headerscheme="background--dark" style="">
+                                <div class="be-section-pad clearfix" style="padding-top:0px;padding-bottom:90px;">
+                                    <div class="be-row be-wrap clearfix">
+                                        <div class="one-col column-block clearfix" data-animation="" style="">
+                                            <div class="be-custom-column-inner">
+                                                <div class="special-heading-wrap style1 0" data-animation="fadeIn">
+                                                    <div class="special-heading align-center">
+                                                        <h4 class="special-h-tag" style="color: ">My Instagram</h4>
+                                                        <hr class="separator margin-bottom" style="background-color:#000000;border-color:#000000;color:#000000;height:2px;width:60px;" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  End Page Content -->
+                    </section>
+                </div>
+            </div>
+
+
+            <footer id="footer" class="layout-wide">
+                <span class="footer-border be-wrap"></span>
+                <div id="footer-wrap" class="style1 be-wrap clearfix">
+                    <div class="footer-left-area"> </div>
+                    <div class="footer-center-area">
+                        <div class="footer-content-inner-center">
+                            <div class="icon-shortcode align-none"><a href="#" class="icon-shortcode icon-circle" data-animation="fadeIn"><i class="font-icon icon-facebook2 tiny circle" style="border-style: solid; border-width: px; border-color: #000000; background-color: #000000; color: #ffffff;" data-animation="fadeIn" data-bg-color="#000000" data-hover-bg-color="#db2e2e" data-color="#ffffff" data-hover-color="#ffffff" data-border-color="#000000" data-hover-border-color="#af9f66"></i></a></div>
+                            <div class="icon-shortcode align-none"><a href="#" class="icon-shortcode icon-circle" data-animation="fadeIn"><i class="font-icon icon-twitter2 tiny circle" style="border-style: solid; border-width: px; border-color: #000000; background-color: #000000; color: #ffffff;" data-animation="fadeIn" data-bg-color="#000000" data-hover-bg-color="#db2e2e" data-color="#ffffff" data-hover-color="#ffffff" data-border-color="#000000" data-hover-border-color="#af9f66"></i></a></div>
+                            <div class="icon-shortcode align-none"><a href="https://www.instagram.com/dannyn44/" class="icon-shortcode icon-circle" data-animation="fadeIn"><i class="font-icon icon-instagram2 tiny circle" style="border-style: solid; border-width: px; border-color: #000000; background-color: #000000; color: #ffffff;" data-animation="fadeIn" data-bg-color="#000000" data-hover-bg-color="#db2e2e" data-color="#ffffff" data-hover-color="#ffffff" data-border-color="#000000" data-hover-border-color="#af9f66"></i></a></div>
+                        </div>
+                    </div>
+                    <div class="footer-right-area">Copyright Danny Nieto 2016. Powered by <a href="https://github.com/djangular">djangular</a></div>
+                </div>
+            </footer>
+        </div>
+        <a href="#" id="back-to-top" class="layout-wide"><i class="font-icon icon-arrow_carrot-up"></i></a>
+    </div>
+
+{% endblock %}
