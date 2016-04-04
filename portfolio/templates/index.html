@@ -1,0 +1,139 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}<title>{{ title }}</title>{% endblock %}
+
+{% block content %}
+
+    <div id="main-wrapper">
+        <div id="main" class="ajaxable layout-wide">
+            <header id="header">
+                <div id="header-inner-wrap" class=" style6">
+                    <div id="left-header-mobile" class="clearfix">
+                        <div class="logo">
+                            <a href="/"><img class="normal-logo" src="{% static "images/logo.png" %}" alt="Logo" /><img class="sticky-logo" src="{% static "images/logo.png" %}" alt="Logo" /></a>
+                        </div>
+                        <div class="mobile-nav-controller-wrap">
+                            <div class="menu-controls mobile-nav-controller" title="Mobile Menu Controller"><i class="font-icon icon-list2"></i></div>
+                        </div>
+                    </div>
+                    <div id="header-wrap" class="be-wrap clearfix" data-default-height="128" data-sticky-height="128">
+                        <div class="logo">
+                            <a href="/"><img class="normal-logo" src="{% static "images/logo.png" %}" alt="Logo" /><img class="sticky-logo" src="{% static "images/logo.png" %}" alt="Logo" /></a>
+                        </div>
+                        <div id="header-controls-right">
+                            <div class="mobile-nav-controller-wrap">
+                                <div class="menu-controls mobile-nav-controller">
+                                    <div class="font-icon custom-font-icon"><span class="menu-icon menu-icon-first"></span><span class="menu-icon menu-icon-second"></span><span class="menu-icon menu-icon-third"></span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <nav id="navigation-left-side" class="clearfix">
+                            <div class="menu">
+                                <ul id="left-menu" class="clearfix">
+                                    <li id="menu-item-176" class="menu-item menu-item-type-post_type menu-item-object-page menu-item menu-item-176"><a href="/about">About</a>
+                                    <li id="menu-item-177" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-4 current_page_item menu-item-177"><a href="#">Home</a></li>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                        <nav id="navigation-right-side" class="clearfix">
+                            <div class="menu">
+                                <ul id="right-menu" class="clearfix">
+                                    <!--<li id="menu-item-179" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-179"><a href="blog.html">Journal</a></li>-->
+                                    <li id="menu-item-178" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-178"><a href="/contact">Booking</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+
+
+                    <span class="header-border be-wrap"></span>
+                    <div class="clearfix">
+                        <div class="mobile-menu left-mobile-menu">
+                            <ul id="mobile-menu" class="clearfix">
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item menu-item-176"><a href="/about">About</a>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-4 current_page_item menu-item-177"><a href="#">Home</a></li>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mobile-menu right-mobile-menu">
+                            <ul id="mobile-menu" class="clearfix">
+                                <!--<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-179"><a href="blog.html">Journal</a></li>-->
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-178"><a href="/contact">Booking</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- END HEADER -->
+
+            <div class="header-hero-section"></div>
+            <div id="content" class="no-sidebar-page">
+                <div id="content-wrap" class="page-builder">
+                    <section id="page-content">
+                        <div class="clearfix">
+                            <div class="be-section clearfix" data-headerscheme="background--dark" style="">
+                                <div class="be-section-pad clearfix" style="padding-top:60px;padding-bottom:60px;">
+                                    <div class="be-row be-wrap clearfix">
+                                        <div class="one-col column-block clearfix" data-animation="" style="">
+                                            <div class="be-custom-column-inner">
+                                                <div class="portfolio-all-wrap">
+                                                    <div class="portfolio full-screen full-screen-gutter style1-gutter five-col" style="margin-right: 5px;" data-action="get_be_gallery_with_pagination" data-paged="1" data-masonry="0" data-source='{"source":"selected","account_name":"themeforest","count":"10","col":"five","masonry":0}' data-gutter-width="5" data-images-array="162,163,157,83,62,16,14,71,15,34,81,159,165,64,147,143,144,145,146,80,149,152,153,154,155,158,160,166,167,164,161,148,137,55" data-col="five" data-items-per-load="12" data-hover-style="style1-hover" data-image-grayscale="bw_to_c" data-lightbox-type="photoswipe" data-image-source="selected" data-image-effect="none" data-thumb-overlay-color="rgba(0,0,0,0.05)" data-grad-style-color="" data-like-button="1">
+                                                        <div class="portfolio-container clickable clearfix portfolio-shortcode be-photoswipe-gallery init-slide-top ">
+                                                          {% if gallery %}
+                                                            {% for photo in gallery %}
+                                                              <div class="element be-hoverlay not-wide no-wide-width-height style1-hover bw_to_c" style="margin-bottom: 5px !important;">
+                                                                  <div class="element-inner" style="margin-left: 5px;">
+                                                                      <a href="{{ photo.overlay.url }}" data-size="1706x1165" data-href="{{ photo.overlay.url }}" class="thumb-wrap image-popup-vertical-fit  mfp-image" title="">
+                                                                          <div class="flip-wrap">
+                                                                              <div class="flip-img-wrap none-effect"><img src="{{ photo.thumbnail.url }}" alt /></div>
+                                                                          </div>
+                                                                          <div class="thumb-overlay">
+                                                                              <div class="thumb-bg" style="background-color:rgba(0,0,0,0.05);">
+                                                                                  <div class="thumb-title-wrap display-table-cell vertical-align-middle align-center fadeIn animated">
+                                                                                      <div class="thumb-title"><i class="portfolio-overlay-icon"></i></div>
+                                                                                  </div>
+                                                                              </div>
+                                                                          </div>
+                                                                      </a>
+                                                                  </div>
+                                                              </div>
+                                                              {% endfor %}
+                                                          {% else %}
+                                                            <h3 style="text-align:center">No photos yet</h3>
+                                                          {% endif %}
+                                                        </div>
+                                                        <div class="trigger_infinite_scroll gallery_infinite_scroll"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  End Page Content -->
+                    </section>
+                </div>
+            </div>
+            <footer id="footer" class="layout-wide">
+                <span class="footer-border be-wrap"></span>
+                <div id="footer-wrap" class=" style1 be-wrap clearfix">
+                    <div class="footer-left-area"> </div>
+                    <div class="footer-center-area">
+                        <div class="footer-content-inner-center">
+                            <div class="icon-shortcode align-none"><a href="#" class="icon-shortcode icon-circle" data-animation="fadeIn"><i class="font-icon icon-facebook2 tiny circle" style="border-style: solid; border-width: px; border-color: #000000; background-color: #000000; color: #ffffff;" data-animation="fadeIn" data-bg-color="#000000" data-hover-bg-color="#db2e2e" data-color="#ffffff" data-hover-color="#ffffff" data-border-color="#000000" data-hover-border-color="#af9f66"></i></a></div>
+                            <div class="icon-shortcode align-none"><a href="#" class="icon-shortcode icon-circle" data-animation="fadeIn"><i class="font-icon icon-twitter2 tiny circle" style="border-style: solid; border-width: px; border-color: #000000; background-color: #000000; color: #ffffff;" data-animation="fadeIn" data-bg-color="#000000" data-hover-bg-color="#db2e2e" data-color="#ffffff" data-hover-color="#ffffff" data-border-color="#000000" data-hover-border-color="#af9f66"></i></a></div>
+                            <div class="icon-shortcode align-none"><a href="https://www.instagram.com/dannyn44/" class="icon-shortcode icon-circle" data-animation="fadeIn"><i class="font-icon icon-instagram2 tiny circle" style="border-style: solid; border-width: px; border-color: #000000; background-color: #000000; color: #ffffff;" data-animation="fadeIn" data-bg-color="#000000" data-hover-bg-color="#db2e2e" data-color="#ffffff" data-hover-color="#ffffff" data-border-color="#000000" data-hover-border-color="#af9f66"></i></a></div>
+                        </div>
+                    </div>
+                    <div class="footer-right-area">Copyright Danny Nieto 2016. Powered by <a href="https://github.com/djangular">djangular</a></div>
+                </div>
+            </footer>
+        </div>
+        <a href="#" id="back-to-top" class="layout-wide"><i class="font-icon icon-arrow_carrot-up"></i></a>
+    </div>
+
+{% endblock %}
