@@ -1349,19 +1349,6 @@ ul.team-social{
     -o-transform: scale(1);
     transform: scale(1);
 }
-.element.bw_to_bw .element-inner .flip-img-wrap img,
-.element.bw_to_c .element-inner .flip-img-wrap img,
-.element.c_to_bw .element-inner:hover .flip-img-wrap img,
-.client-carousel-item.bw_to_bw img,
-.client-carousel-item.bw_to_c img,
-.client-carousel-item.c_to_bw:hover img {
-    filter : url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter     id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /*     Firefox 10+, Firefox on Android */
-    filter : gray; /* IE6-9 */
-    -webkit-filter : grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
-    -moz-filter: grayscale(100%);
-    -ms-filter: grayscale(100%);
-    -o-filter: grayscale(100%);
-}
 .element.bw_to_c .element-inner:hover .flip-img-wrap img,
 .element.c_to_bw .element-inner .flip-img-wrap img,
 .client-carousel-item.bw_to_c:hover img,
