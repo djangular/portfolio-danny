@@ -105,6 +105,14 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
 
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+STATICFILES_STORAGE = DEFAULT_FILE_STORAGE
+AWS_ACCESS_KEY_ID = 'AKIAIDFK2TY7NVDL7FAA'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'danny-portfolio'
+STATIC_URL = '//s3.amazonaws.com/%s/' % AWS_STORAGE_BUCKET_NAME
+ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
+
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'localhost'
