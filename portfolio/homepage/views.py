@@ -31,7 +31,7 @@ def contact(request):
     return render(request, 'contact.html', context)
 
 def send_message(request):
-    name     = request.POST['name']
+    name     = request.POST['contact_name']
     email    = request.POST['email']
     subject  = request.POST['subject']
     message  = request.POST['message']
