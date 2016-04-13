@@ -1,5 +1,7 @@
 var $ = jQuery.noConflict();
 
+$.cors = true;
+
 $(document).ready(function($) {
 	"use strict";
 	
