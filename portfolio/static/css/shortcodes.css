@@ -2773,6 +2773,7 @@ a.icon-shortcode.icon-plain{
 }
 .font-icon.tiny {
     font-size: 12px;
+    padding-top: 8px;
 }
 .font-icon.small {
     font-size: 16px;
@@ -2803,7 +2804,7 @@ a.icon-shortcode.icon-plain{
 }
 .font-icon.tiny {
     width: 28px;
-    height: 28px;
+    height: 20px;
     line-height: 28px;
 }
 .font-icon.small {
