@@ -131,7 +131,7 @@
                                         <div class="one-half column-block">
                                             <div class="be-custom-column-inner">
                                                 <div class="contact_form contact_form_module style1-input">
-                                                    <form class="contact" id="contact-form">
+                                                    <form class="contact" id="contact-form" method="POST" action="/sendmessage">
                                                       {% csrf_token %}
                                                         <fieldset class="contact_fieldset">
                                                             <input type="text" name="contact_name" id="name" class="txt autoclear" placeholder="Name" style="background-color: #f4f9f8;color: #666666;border-width: 0px; border-style: solid; height: 40px;" />
