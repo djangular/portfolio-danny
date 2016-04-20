@@ -2,8 +2,7 @@ from django.shortcuts import render, HttpResponseRedirect
 from .models import Photo
 
 from django.contrib import messages
-from django.core.mail import send_mail
-
+from django.core.mail import EmailMessage
 
 def home(request):
     title   = 'DuendeInRaw | Danny Nieto'
@@ -28,21 +27,19 @@ def contact(request):
         'title' : title,
     }
 
+    if request.POST:
+        name    = request.POST['contact_name']
+        email   = request.POST['mail']
+        subject = request.POST['website']
+        message = request.POST['comment']
+
+        full_message = "New Email From %s =  Name: %s  \n Message: %s" %(email, name, message)
+
+        to_send = EmailMessage(subject, full_message, to=['danny@duendeinraw.com'])
+        to_send.send()
+
+        messages.success(request, 'Thanks for reaching out!')
+
+        return HttpResponseRedirect('/')
+
     return render(request, 'contact.html', context)
-
-def send_message(request):
-    name     = request.POST['name']
-    email    = request.POST['email']
-    subject  = request.POST['subject']
-    message  = request.POST['message']
-
-    send_mail (
-        subject,
-        message,
-        email,
-        ['danny@duendeinraw.com'],
-        fail_silently=False
-    )
-    messages.success(request, 'Thanks for reaching out!')
-
-    return HttpResponseRedirect('/contact')

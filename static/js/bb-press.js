@@ -22,7 +22,7 @@ $(document).ready(function($) {
             url: 'contact.php',
             dataType: 'json',
             cache: false,
-            data: $('#contact-form').serialize(),
+            data: $('#contact-form')
             success: function(data) {
 
                 if(data.info !== 'error'){
