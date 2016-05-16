@@ -419,7 +419,7 @@ input[type="submit"],
 .more-link.style3-button,
 input[type="button"], input[type="submit"], input[type="reset"], input[type="file"]::-webkit-file-upload-button, button  {
 	font-family: Dosis;
-  font-weight: ;
+  font-weight: 200;
 }
 
 .more-link.style2-button {
@@ -884,7 +884,7 @@ input[type="submit"],
 .single_portfolio_back .font-icon,
 .more-link.style3-button,
 .view-project-link.style3-button {
-    color: #ffffff;
+    color: #ffffff !important;
     transition: 0.2s linear all;
 }
 
