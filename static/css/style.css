@@ -1730,6 +1730,9 @@ ul#footer-menu li a{
 .post-meta a {
 	color: inherit !important;
 }
+.post-meta a:hover {
+	text-decoration: underline;
+}
 .post-title a {
 	color: inherit !important;
 	display: inline-block;
@@ -1929,6 +1932,9 @@ hr {
 }
 .style6-blog .special-subtitle.post-date a {
 	color: inherit;
+}
+.style6-blog .special-subtitle.post-date a:hover {
+	text-decoration: underline;
 }
 .single-post .style6-blog .post-details {
 	margin-bottom: 20px;
